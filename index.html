@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- 🌙 Theme Toggle -->
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="mode-toggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <!-- 🏠 Home -->
+    <div class="header" id="home">
+      <h1>Welcome to the <span>Frontend Quiz!</span></h1>
+      <p>Pick a subject to get started.</p>
+      <div class="subjects">
+        <button class="card" onclick="startQuiz('html')">💻 HTML</button>
+        <button class="card" onclick="startQuiz('css')">🎨 CSS</button>
+        <button class="card" onclick="startQuiz('js')">📟 JavaScript</button>
+        <button class="card" onclick="startQuiz('accessibility')">♿ Accessibility</button>
+      </div>
+    </div>
+
+    <!-- ❓ Quiz Section -->
+    <div class="quiz-box" id="quiz" style="display: none;">
+      <h2 id="question">Question Text</h2>
+      <div id="options"></div>
+    </div>
+
+    <!-- ✅ Result Section -->
+    <div class="result" id="result" style="display: none;">
+      <div class="result-card">
+        <h2>Quiz Completed!</h2>
+        <p id="score-text"></p>
+        <p id="feedback-text" class="feedback"></p>
+        <button onclick="goHome()" class="home-btn">🏠 Go to Home</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
